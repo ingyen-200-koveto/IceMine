@@ -57,7 +57,7 @@ const same = (a, b) => { const x = Buffer.from(a), y = Buffer.from(b); return x.
 const ALPH = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 const makeCode = () => Array.from({ length: 12 }, () => ALPH[crypto.randomInt(ALPH.length)]).join("");
 const mask = e => e.replace(/^(.).*(@.*)$/, "$1***$2");
-const pub = u => ({ name: u.name, email: u.email, coins: u.coins || 0, created: u.created, rank: "default" });
+const pub = u => ({ name: u.name, email: u.email, coins: u.coins || 0, created: u.created, rank: u.rank || "default" });
 const fail = (res, code, error) => res.status(code).json({ error });
 
 // Egyszerű kérésszám-korlát
@@ -240,9 +240,35 @@ app.post("/api/spin", limit(60, 6e5), (req, res) => {
   res.json({ ok: true, slot, win: prize > 0, prize, user: pub(u) });
 });
 
+// Rangok: IceCoinos vásárlás (a forintos fizetés később)
+const RANKS = [
+  { id: "bronz", name: "Bronz", ic: 950 },
+  { id: "abyss", name: "Abyss", ic: 2700 },
+  { id: "iceking", name: "IceKing", ic: 4850 },
+  { id: "yeti", name: "Yeti", ic: 8000 }
+];
+app.post("/api/buy-rank", limit(20, 6e5), (req, res) => {
+  const u = authUser(req);
+  if (!u) return fail(res, 401, "Nem vagy bejelentkezve.");
+  const i = RANKS.findIndex(r => r.id === String((req.body || {}).rank || ""));
+  if (i < 0) return fail(res, 400, "Ismeretlen rang.");
+  const cur = RANKS.findIndex(r => r.name === u.rank);
+  if (i <= cur) return fail(res, 409, i === cur ? "Már ez a rangod." : "Már magasabb rangod van.");
+  const r = RANKS[i], bal = u.coins || 0;
+  if (bal < r.ic) return fail(res, 402, "Nincs elég IceCoinod. Még " + (r.ic - bal) + " IceCoin hiányzik.");
+  u.coins = bal - r.ic; u.rank = r.name; u.rankSince = Date.now();
+  db.purchases = db.purchases || [];
+  db.purchases.push({ t: Date.now(), user: u.name, rank: r.name, ic: r.ic });
+  if (db.purchases.length > 2000) db.purchases.splice(0, db.purchases.length - 2000);
+  save();
+  res.json({ ok: true, user: pub(u) });
+});
+
 app.get("/api/me", (req, res) => { const u = authUser(req); u ? res.json({ user: pub(u) }) : fail(res, 401, "Nem vagy bejelentkezve."); });
 app.post("/api/logout", (req, res) => { const t = (req.headers.authorization || "").slice(7); if (t) { delete db.sessions[sha(t)]; save(); } res.json({ ok: true }); });
 app.get("/api/status", (req, res) => res.json({ online: null })); // később a Minecraft szerverből
 
+app.get(["/favicon.png", "/favicon.ico"], (req, res) => res.sendFile(path.join(__dirname, "favicon.png")));
+app.get("/robots.txt", (req, res) => res.type("text/plain").send("User-agent: *\nAllow: /\nDisallow: /api/\n"));
 app.get("/", (req, res) => res.sendFile(path.join(__dirname, "index.html")));
 boot().catch(e => { console.error("Indítási hiba:", e.message); process.exit(1); });

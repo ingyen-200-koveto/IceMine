@@ -3,7 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>IceMine</title>
+<title>IceMine Network | Magyarország legmenőbb Minecraft közössége</title>
+<meta name="description" content="Készülj fel a fagyos kalandokra! Egyedi fejlesztésű játékmódok, havonta megújuló események és kiegyensúlyozott gazdaság. Támogatott verziók: 1.20 – 1.21.x.">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<meta name="theme-color" content="#0b3a5b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IceMine">
+<meta property="og:title" content="IceMine Network | Magyarország legmenőbb Minecraft közössége">
+<meta property="og:description" content="Készülj fel a fagyos kalandokra! Egyedi fejlesztésű játékmódok, havonta megújuló események és kiegyensúlyozott gazdaság. Támogatott verziók: 1.20 – 1.21.x.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"IceMine","url":"https://icemine.hu/"}</script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Sora:wght@600;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f2f8fc;--bg2:#e4effa;--solid:#fff;--ink:#0a1e2b;--mute:#587184;--ice:#1c8ad6;--line:#0b3a5b1f;--bad:#c62828;--ok:#14884f;--glow:#7fd3ff;--sh:0 18px 40px -24px #0b3a5b77;--hh:72px;
@@ -213,6 +222,50 @@ a.lk:hover{background:var(--bg2);color:var(--ink)}
 @keyframes fall{to{transform:translate(var(--dx),110vh) rotate(var(--r))}}
 :root{--coin:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Cdefs%3E%3ClinearGradient id=%22r%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23e2f7ff%22/%3E%3Cstop offset=%22.45%22 stop-color=%22%2362c4ff%22/%3E%3Cstop offset=%221%22 stop-color=%22%230d4f8a%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22f%22 x1=%22.25%22 y1=%220%22 x2=%22.75%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%239be2ff%22/%3E%3Cstop offset=%22.5%22 stop-color=%22%232b90e2%22/%3E%3Cstop offset=%221%22 stop-color=%22%2314529e%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx=%2220%22 cy=%2220%22 r=%2219.6%22 fill=%22%230a3354%22/%3E%3Ccircle cx=%2220%22 cy=%2220%22 r=%2218.2%22 fill=%22url%28%23r%29%22/%3E%3Cpath d=%22M20 5.2 32.8 12.6v14.8L20 34.8 7.2 27.4V12.6z%22 fill=%22url%28%23f%29%22 stroke=%22%230a3354%22 stroke-opacity=%22.45%22 stroke-width=%221%22/%3E%3Cpath d=%22M20 5.2V20L7.2 12.6M20 20l12.8-7.4%22 stroke=%22%23fff%22 stroke-opacity=%22.16%22 stroke-width=%221%22 fill=%22none%22/%3E%3Cg stroke=%22%23f4fcff%22 stroke-width=%222.3%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22%3E%3Cg transform=%22rotate%280 20 20%29%22%3E%3Cpath d=%22M20 11.5v17M17.6 13.6l2.4 2.2 2.4-2.2M17.6 26.4l2.4-2.2 2.4 2.2%22/%3E%3C/g%3E%3Cg transform=%22rotate%2860 20 20%29%22%3E%3Cpath d=%22M20 11.5v17M17.6 13.6l2.4 2.2 2.4-2.2M17.6 26.4l2.4-2.2 2.4 2.2%22/%3E%3C/g%3E%3Cg transform=%22rotate%28120 20 20%29%22%3E%3Cpath d=%22M20 11.5v17M17.6 13.6l2.4 2.2 2.4-2.2M17.6 26.4l2.4-2.2 2.4 2.2%22/%3E%3C/g%3E%3C/g%3E%3Cpath d=%22M8.6 14.2A12.6 12.6 0 0 1 16.8 7.4%22 stroke=%22%23fff%22 stroke-opacity=%22.75%22 stroke-width=%222%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3C/svg%3E")}
 .pcoin{display:inline-block;width:34px;height:34px;border-radius:50%;background:var(--coin) center/contain no-repeat;box-shadow:0 8px 14px -7px #1c6fd6}
+.page[data-page="rangok"]{max-width:900px;container-type:inline-size}
+.rbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.rbar small{color:var(--mute);font-weight:700;font-size:13.5px}
+.rmodes{display:flex;flex-wrap:wrap;gap:6px}
+.rmodes button{flex:none;font:700 14px Sora,sans-serif;padding:10px 16px;border:0;border-radius:999px;background:var(--solid);color:var(--mute);box-shadow:inset 0 0 0 1px var(--line);cursor:pointer;transition:background .15s,color .15s}
+.rmodes button:hover{color:var(--ink)}
+.rmodes button[aria-pressed="true"]{background:var(--ink);color:var(--bg);box-shadow:none}
+#rankMsg{margin:0 0 14px}#rankMsg:empty{display:none}
+.rgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@container (max-width:640px){.rgrid{grid-template-columns:1fr}}
+.rcard{position:relative;display:flex;flex-direction:column;overflow:hidden;background:var(--solid);border-radius:22px;box-shadow:inset 0 0 0 1px var(--line),var(--sh)}
+.rcard.own{box-shadow:inset 0 0 0 2px var(--r2),var(--sh)}
+.r-bronz{--r1:#f3b783;--r2:#a4592a;--rt:#fff}
+.r-abyss{--r1:#a593ff;--r2:#33238a;--rt:#fff}
+.r-iceking{--r1:#c9f3ff;--r2:#2192dc;--rt:#05253c}
+.r-yeti{--r1:#fff3c4;--r2:#d79a14;--rt:#3a2600}
+.rhead{position:relative;overflow:hidden;display:flex;align-items:center;gap:14px;padding:18px 20px;color:var(--rt);background:linear-gradient(135deg,var(--r1),var(--r2))}
+.rhead::after{content:"";position:absolute;right:-26px;top:-34px;width:120px;height:120px;border-radius:26px;transform:rotate(22deg);background:#ffffff26;pointer-events:none}
+.rhead .gem{flex:none;width:44px;height:44px;filter:drop-shadow(0 6px 8px #0000004d)}
+.rhead small{display:block;font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
+.page .rhead h3{margin:0;font-size:24px;color:inherit}
+.rtag{position:relative;z-index:1;margin-left:auto;padding:5px 11px;border-radius:999px;background:#ffffffd9;color:#0a1e2b;font:800 12px Sora,sans-serif}
+.rbody{display:flex;flex-direction:column;gap:16px;flex:1;padding:18px 20px 20px}
+.rprice{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.rprice .pcoin{width:24px;height:24px}
+.rprice b{font:800 24px Sora,sans-serif;letter-spacing:-.02em}
+.rprice .or{color:var(--mute);font-weight:700;font-size:14.5px}
+.rsec h4{margin:0 0 6px;font:800 13px Sora,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--mute)}
+.rgen{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.rgen li{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:var(--bg2);font-weight:700;font-size:13.5px}
+.rgen li svg{width:14px;height:14px;color:var(--ok);stroke-width:3}
+.rrow{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.rrow:last-child{border-bottom:0}
+.rrow span{flex:none;color:var(--mute);font-weight:600}
+.rrow b{text-align:right;font-weight:800}
+.ract{display:grid;gap:10px;margin-top:auto;padding-top:4px}
+.ract .btn{width:100%}
+.rcard .btn:disabled{cursor:not-allowed}
+.rmiss{margin:0;color:var(--bad);font-weight:600;font-size:13.5px}
+.rmiss a{font-weight:800}
+.rown{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:10px;background:color-mix(in srgb,var(--ok) 14%,var(--solid));color:var(--ok);font:800 14.5px Sora,sans-serif}
+.rown svg{width:18px;height:18px;stroke-width:3}
+.rown.dim{background:var(--bg2);color:var(--mute)}
+.rcard .msg:empty{display:none}
 .page[data-page="vasarlas"]{max-width:860px}
 .shophero{position:relative;overflow:hidden;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:26px 24px;margin-bottom:22px;border-radius:24px;color:#fff;background:radial-gradient(60% 130% at 100% 0,#7fd3ff70,transparent 62%),linear-gradient(135deg,#1c6fd6,#0b3a5b)}
 .shophero::after{content:"";position:absolute;right:-34px;bottom:-46px;width:170px;height:170px;border-radius:34px;transform:rotate(20deg);background:linear-gradient(135deg,#ffffff2e,#ffffff05);box-shadow:inset 0 0 0 1px #ffffff26;pointer-events:none}
@@ -467,7 +520,13 @@ a.lk:hover{background:var(--bg2);color:var(--ink)}
       </section>
 
       <section class="page" data-page="rangok">
-        <h2>Rangok</h2>
+        <div class="shophero">
+          <div><h2>Rangok</h2><p>Válassz rangot, és vedd meg IceCoinért vagy forintért.</p></div>
+          <div class="balpill"><span class="pcoin"></span>Egyenleged: <b id="rankBal">0</b></div>
+        </div>
+        <div class="rbar"><small>Jutalmak ebben a játékmódban:</small><div class="rmodes" id="rModes" role="group" aria-label="Játékmód"></div></div>
+        <div class="msg" id="rankMsg" aria-live="polite"></div>
+        <div class="rgrid" id="rankGrid"></div>
       </section>
 
       <section class="page" data-page="vasarlas">
@@ -751,7 +810,7 @@ function render(){
   $("#fig").innerHTML=figure(user.name);
   const src="https://mc-heads.net/body/"+encodeURIComponent(user.name)+"/260";
   if(skin.dataset.n!==user.name){skin.dataset.n=user.name;skin.hidden=true;$("#fig").hidden=false;skin.src=src}
-  tUpdate();sUpdate();
+  tUpdate();sUpdate();renderRanks();
 }
 
 /* szerencsekerék */
@@ -840,6 +899,74 @@ $("#spinBtn").onclick=async()=>{
       $("#winBox").hidden=false;confetti();
     }else $("#loseBox").hidden=false;
   });
+};
+
+/* rangok */
+const MODES=["Kingdoms","KitPvP","Fyland","SkyPvP","Gens"];
+const RANKS=[
+ {id:"bronz",name:"Bronz",ic:950,ft:1000,gen:["20 IC / hét"],modes:{
+  Kingdoms:[["Kulcscsomag","5× Snow kulcs"],["Napi jutalom","100 Nexus pont"],["Kit","Bronz Kit"],["Heti jutalom","2× Snow kulcs"]],
+  KitPvP:[["Kulcscsomag","5× Rare kulcs"],["Napi jutalom","1× II. Pénzeszsák"],["Heti jutalom","10× Bánya kulcs"],["Extra","Inventory törlés"]],
+  Fyland:[["Kulcscsomag","5× Copper kulcs"],["Napi jutalom","16× Vasblokk"],["Heti jutalom","2× Star kulcs"]],
+  SkyPvP:[["Kulcscsomag","5× Abyss kulcs"],["Heti jutalom","2× Abyss kulcs"],["Kit","Íjász Kit"]],
+  Gens:[["Kulcscsomag","3× FORTUNE kulcs"],["Napi jutalom","1× Mini Elixir Bónusz + 1× Mini XP Bónusz"],["Heti jutalom","2× Elixir Booster + 1× Pénz Booster"]]}},
+ {id:"abyss",name:"Abyss",ic:2700,ft:2000,gen:["Jog csomag","5 nap Fly","InvSee","Food","Repair"],modes:{
+  Kingdoms:[["Kulcscsomag","10× Snow kulcs"],["Napi jutalom","200 Nexus pont"],["Kit","Netherite Kit"],["Heti jutalom","4× Snow kulcs"]],
+  KitPvP:[["Kulcscsomag","10× Rare kulcs"],["Napi jutalom","2× II. Pénzeszsák"],["Heti jutalom","20× Bánya kulcs"],["Extra","Inventory törlés"]],
+  Fyland:[["Kulcscsomag","10× Copper kulcs"],["Napi jutalom","32× Vasblokk"],["Heti jutalom","4× Star kulcs"]],
+  SkyPvP:[["Kulcscsomag","10× Abyss kulcs"],["Heti jutalom","4× Abyss kulcs"],["Kit","Diamond Kit"]],
+  Gens:[["Kulcscsomag","6× FORTUNE kulcs"],["Napi jutalom","2× Mini Elixir Bónusz + 2× Mini XP Bónusz"],["Heti jutalom","4× Elixir Booster + 2× Pénz Booster"]]}},
+ {id:"iceking",name:"IceKing",ic:4850,ft:4150,gen:["Jog csomag","2 hét Fly","InvSee","Food","Repair","60 IC / hét"],modes:{
+  Kingdoms:[["Kulcscsomag","15× Snow kulcs"],["Napi jutalom","300 Nexus pont"],["Kit","3× Bronz Kit"],["Heti jutalom","6× Snow kulcs"]],
+  KitPvP:[["Kulcscsomag","15× Rare kulcs"],["Napi jutalom","3× II. Pénzeszsák"],["Heti jutalom","30× Bánya kulcs"],["Extra","Inventory törlés"]],
+  Fyland:[["Kulcscsomag","15× Copper kulcs"],["Napi jutalom","48× Vasblokk"],["Heti jutalom","6× Star kulcs"]],
+  SkyPvP:[["Kulcscsomag","15× Abyss kulcs"],["Heti jutalom","6× Abyss kulcs"],["Kit","Diamond Kit"]],
+  Gens:[["Kulcscsomag","9× FORTUNE kulcs"],["Napi jutalom","3× Mini Elixir Bónusz + 3× Mini XP Bónusz"],["Heti jutalom","6× Elixir Booster + 3× Pénz Booster"]]}},
+ {id:"yeti",name:"Yeti",ic:8000,ft:9990,gen:["Jog csomag","30 nap Fly","InvSee","Food","Repair","25 IC / nap"],modes:{
+  Kingdoms:[["Kulcscsomag","75× Snow kulcs"],["Napi jutalom","1 500 Nexus pont"],["Kit","Yeti Kit"],["Heti jutalom","30× Snow kulcs"]],
+  KitPvP:[["Kulcscsomag","75× Rare kulcs"],["Napi jutalom","15× II. Pénzeszsák"],["Heti jutalom","150× Bánya kulcs"],["Extra","Inventory törlés"]],
+  Fyland:[["Kulcscsomag","75× Copper kulcs"],["Napi jutalom","240× Vasblokk"],["Heti jutalom","30× Star kulcs"]],
+  SkyPvP:[["Kulcscsomag","75× Abyss kulcs"],["Heti jutalom","30× Abyss kulcs"],["Kit","Yeti Kit"]],
+  Gens:[["Kulcscsomag","45× FORTUNE kulcs"],["Napi jutalom","15× Mini Elixir Bónusz + 15× Mini XP Bónusz"],["Heti jutalom","30× Elixir Booster + 15× Pénz Booster"]]}}
+];
+let rMode="Kingdoms";
+const RCHECK='<svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>';
+const gem=()=>'<svg class="gem" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 35 11.5v17L20 37 5 28.5v-17z" fill="var(--r2)"/><path d="M20 3 35 11.5 20 20 5 11.5z" fill="#ffffffb3"/><path d="M20 20v17L5 28.5v-17z" fill="#ffffff47"/><path d="M20 20 35 11.5v17L20 37z" fill="#00000026"/><path d="M20 3 35 11.5v17L20 37 5 28.5v-17z" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+function renderRanks(){
+  const cur=user?RANKS.findIndex(r=>r.name===user.rank):-1,bal=user?user.coins||0:0;
+  $("#rankBal").textContent=fmtN(bal);
+  if(!$("#rModes").children.length)$("#rModes").innerHTML=MODES.map(m=>`<button type="button" data-m="${m}">${m}</button>`).join("");
+  $$("#rModes button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.m===rMode));
+  $("#rankGrid").innerHTML=RANKS.map((r,i)=>{
+    const miss=r.ic-bal;let act;
+    if(i===cur)act=`<div class="rown">${RCHECK}Ez a jelenlegi rangod</div>`;
+    else if(i<cur)act=`<div class="rown dim">Már magasabb rangod van</div>`;
+    else act=`<button class="btn mc" type="button" data-buy="${r.id}"${miss>0?" disabled":""}>Megveszem ${fmtN(r.ic)} IC-ért</button><button class="btn mc alt" type="button" data-ft="${r.id}">Fizetés forintban: ${fmtN(r.ft)} Ft</button>`+(miss>0?`<p class="rmiss">Még ${fmtN(miss)} IceCoin hiányzik. <a href="#vasarlas">Feltöltés</a></p>`:"");
+    return `<article class="rcard r-${r.id}${i===cur?" own":""}">
+      <header class="rhead">${gem()}<div><small>Rang</small><h3>${r.name}</h3></div>${i===cur?'<span class="rtag">A te rangod</span>':""}</header>
+      <div class="rbody">
+        <div class="rprice"><span class="pcoin"></span><b>${fmtN(r.ic)} IC</b><span class="or">vagy ${fmtN(r.ft)} Ft</span></div>
+        <div class="rsec"><h4>Általános</h4><ul class="rgen">${r.gen.map(g=>`<li>${RCHECK}${g}</li>`).join("")}</ul></div>
+        <div class="rsec"><h4>${rMode}</h4>${(r.modes[rMode]||[]).map(([k,v])=>`<div class="rrow"><span>${k}</span><b>${v}</b></div>`).join("")}</div>
+        <div class="ract">${act}</div>
+        <div class="msg" data-msg="${r.id}" aria-live="polite"></div>
+      </div>
+    </article>`;
+  }).join("");
+}
+$("#rModes").onclick=e=>{const b=e.target.closest("button[data-m]");if(!b)return;rMode=b.dataset.m;renderRanks()};
+$("#rankGrid").onclick=async e=>{
+  const b=e.target.closest("button");if(!b)return;
+  const id=b.dataset.buy||b.dataset.ft,r=RANKS.find(x=>x.id===id);if(!r)return;
+  const m=$(`[data-msg="${id}"]`);
+  if(b.dataset.ft){m.textContent="A forintos fizetés még nincs bekötve, hamarosan elérhető.";m.className="msg";return}
+  if(!confirm(r.name+" rang "+fmtN(r.ic)+" IceCoinért. Folytatod?"))return;
+  b.disabled=true;
+  const d=await api("/api/buy-rank",{rank:r.id});
+  if(d.error){b.disabled=false;m.textContent=d.error;m.className="msg e";return}
+  user=d.user;render();
+  msg("#rankMsg","Gratulálunk! Mostantól "+r.name+" rangod van.","o");
+  $("#rankMsg").scrollIntoView({block:"center",behavior:reduceMotion()?"auto":"smooth"});
 };
 
 /* vásárlás */
